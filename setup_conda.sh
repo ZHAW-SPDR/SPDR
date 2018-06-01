@@ -12,6 +12,7 @@ pip install https://github.com/dnouri/nolearn/archive/master.zip#egg=nolearn
 conda install pandas=0.20.3
 conda install -c omnia munkres=1.0.7
 conda install matplotlib=2.1.0
+pip install pydub
 pip install auditok
 conda install gcc
 pip install pyannote.metrics
