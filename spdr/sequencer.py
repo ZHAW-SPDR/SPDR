@@ -14,19 +14,12 @@ optional arguments:
   -h, --help  show this help message and exit
   
 """
-import os
 import numpy as np
 from sklearn.manifold import TSNE
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
-from sklearn import metrics
-from sklearn.metrics import pairwise as pw
-from scipy.stats.stats import pearsonr, spearmanr, kendalltau
-from pydub import AudioSegment
-from .utils import SPDR_Util, Sequence
-from scipy.spatial.distance import cosine, euclidean, pdist, squareform
-from sklearn import preprocessing
-from .cluster import SPDR_Clustering
+from .utils import SPDR_Util
+from scipy.spatial.distance import pdist
 
 
 class SPDR_Sequencer():

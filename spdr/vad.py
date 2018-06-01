@@ -8,12 +8,9 @@ import pickle
 from abc import ABC, abstractmethod
 
 import collections
-import contextlib
-import wave
 
 import librosa
 import numpy as np
-import soundfile as sf
 from .utils import SPDR_Util
 
 ALLOWED_EXTENSIONS = ('wav', 'mp3')

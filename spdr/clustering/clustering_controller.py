@@ -53,32 +53,6 @@ class ClusteringController:
 
         return similarity_lists
 
-    def plot_similarity_matrix(self, embeddings):
-        if self.metric == "cosine":
-            dist_mat = pw.cosine_distances(embeddings)
-            # dist_mat = pw.cosine_similarity(embeddings)
-            # dist_mat = np.arccos(dist_mat)
-            # dist_mat[np.eye(dist_mat.shape[0]) > 0] = 0
-            # dist_mat /= np.pi
-        else:
-            dist_mat = distance.pdist(embeddings, metric=self.metric)
-            dist_mat = distance.squareform(dist_mat)
-
-        sigmas = np.sort(dist_mat, axis=1)[:, 1:8]
-        sigmas = np.mean(sigmas, axis=1)
-        sigmas = np.dot(sigmas[:, np.newaxis], sigmas[np.newaxis, :])
-        dist_mat /= -sigmas
-        dist_mat = np.exp(dist_mat)
-
-        dist_mat = dist_mat * (1. - np.identity(dist_mat.shape[0]))
-
-        cmap = cm.get_cmap('inferno')
-        cax = plt.matshow(dist_mat, interpolation='nearest', cmap=cmap)
-        plt.grid(True)
-        plt.title('Sequence similarity matrix using metric %s' % self.metric)
-        plt.colorbar(cax)
-        plt.show()
-
     def cluster_embeddings(self, embeddings, speaker_ids, changepoint_vector):
         algorithm = self.algorithm if self.algorithm in self.clusteringAlgorithm else "dominantset"
 

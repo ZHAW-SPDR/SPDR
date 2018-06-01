@@ -14,12 +14,11 @@ import pickle
 from pyannote.core import Timeline, Segment
 
 from spdr.metrics import SPDR_Metrics
-from spdr.parser.voxceleb_parser import Voxceleb_Parser
 from spdr.segmenter import segment_wave_files_from_to
 from spdr.embedding_extractor import EmbeddingExtractor
 from spdr.sequencer import SPDR_Sequencer
 from spdr.utils import SPDR_Util, get_filename_with_new_extension, get_filename_without_extension
-from spdr.hypothesis_generator import define_hypothesis, define_hypothesis_for_embeddings
+from spdr.hypothesis_generator import define_hypothesis_for_embeddings
 from spdr.clustering import clustering_controller
 from spdr.handler import SPDR_RT09_Handler
 from spdr.vad import SPDR_GMM_Vad
@@ -72,21 +71,15 @@ class Controller:
                                        segment_size=self.config['segment']['size'],
                                        timeline=aligned_timeline_in_ms)
 
-            # detect voice and strip non voice sequences (optional)
             # get embedding vector - use https://github.com/stdm/ZHAW_deep_voice/
             embeddings = self.embedding_extractor.extract_embeddings([file_to_progress])
 
             with open(embedding_pickle, 'wb') as pFile:
                 pickle.dump(embeddings, pFile)
 
-        #plot_embeddings(embeddings, dataset['reference'], timeline, self.config['segment']['size'])
-
         # join similar sequences (i.e. part A of sentence 1 with part B of sentence 1)
         sequencer = SPDR_Sequencer(embeddings=embeddings)
         changepoint_vector = sequencer.find_changepoints()
-
-        # sequences, sequence_ids, cluster_result, clusters = sequencer.generate_sequences(start_time=timeline[0])
-        # print("Number of sequences %d" % len(sequences))
 
         print("Number of changepoints: %d" % changepoint_vector.count(0))
 
@@ -106,7 +99,7 @@ class Controller:
         # get metrics
         uem = Timeline([Segment(dataset["start"], dataset["end"])])
         hypothesis = define_hypothesis_for_embeddings(cluster_result, aligned_timeline_in_ms[0] / 1000)
-        #hypothesis = define_hypothesis(sequences, cluster_result)
+
         # do cleanup
         handler.do_cleanup()
         
@@ -152,12 +145,6 @@ class Controller:
             }
 
     @staticmethod
-    def _get_groudtruth():
-        vp = Voxceleb_Parser('./data/groundtruth/voxceleb1')
-        vp.parse()
-        return vp.get_Reference()
-
-    @staticmethod
     def _align_to_duration(duration, time, is_start):
         if time % duration == 0:
             return time
@@ -170,34 +157,6 @@ class Controller:
     def _align_timeline(duration, timeline):
         return (Controller._align_to_duration(duration, int(timeline[0] * 1000), is_start=True),
                 Controller._align_to_duration(duration, int(timeline[1] * 1000), is_start=False))
-
-    def _per_segment_cluster(self, embeddings, window_size=50):
-        """
-        To generate the embeddings the NN used a window-size of 500ms.
-        The input audio-segments have a size of self.arguments.segment_size.
-        This method reassembles the smaller NN-segments to the originally segment_size and set a speaker-id
-        per segments, so len(speaker-nr) = len(audio_segments).
-
-        This method shouldn't used in the finished pipeline, only to test the dominant-set cluster algorithm setup
-
-        :param embeddings: Embedding-Matrix [Segments, Embedding-Vector]
-        :return: embeddings per speaker (using average to concat them), speakers
-        """
-        original_segment_size = (self.config['segment']['size'] // 10)
-        transform_factor = (original_segment_size // window_size)
-
-        segments = embeddings.shape[0] // transform_factor
-        embedding_per_segment = np.zeros((segments, embeddings.shape[1]), dtype=np.float32)
-        speaker_id = 0
-        speakers = []
-
-        for i in range(0, segments):
-            speakers.append(speaker_id)
-            skip = i * transform_factor
-            embedding_per_segment[i] = np.mean(embeddings[skip:(skip + transform_factor), :], axis=0)
-            speaker_id += 1
-
-        return embedding_per_segment, speakers
 
 
 if __name__ == '__main__':

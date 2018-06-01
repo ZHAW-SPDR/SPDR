@@ -54,9 +54,15 @@ Contact NIST to obtain the RT-09 dataset. The dataset have to be stored under ./
 
 
 ## How to use
-If all requirements are meet just run:
+
+If the environment "SPDR" is active run:
 ~~~~
 $ ./run_spdr.sh
+~~~~
+
+Activate the environment "SPDR" with following command:
+~~~~
+$ source activate SPDR
 ~~~~
 
 ## Development

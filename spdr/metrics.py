@@ -110,7 +110,7 @@ class SPDR_Metrics():
         detailed    : bool, optional
         """
         metric = DiarizationPurity(weighted=weighted)
-        detail = metric.compute_components(self.reference, self.hypothesis)
+        detail = metric.compute_components(self.reference, self.hypothesis, uem=self.uem)
         if detailed:
             return detail
         else: 
@@ -129,7 +129,7 @@ class SPDR_Metrics():
         detailed    : bool, optional
         """
         metric = DiarizationCoverage(weighted=weighted)
-        detail = metric.compute_components(self.reference, self.hypothesis)
+        detail = metric.compute_components(self.reference, self.hypothesis, uem=self.uem)
         if detailed:
             return detail
         else: 
@@ -137,7 +137,7 @@ class SPDR_Metrics():
 
     def get_DiarizationCoveragePurityFScore(self, detailed=False):
         metric = DiarizationPurityCoverageFMeasure()
-        detail = metric.compute_components(self.reference, self.hypothesis)
+        detail = metric.compute_components(self.reference, self.hypothesis, uem=self.uem)
         if detailed:
             return detail
         else: 
