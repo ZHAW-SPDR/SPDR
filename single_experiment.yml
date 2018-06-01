@@ -1,0 +1,19 @@
+%YAML 1.1
+---
+data:
+    in: "./data/in/TIMIT/"
+    datasubset_to_use: "TIMIT_DUMMY-01"
+embeddings:
+    network: "pairwise_lstm_1251_voxceleb_best.h5"
+hypothesis:
+    scaledown: true
+...
+---
+data:
+    in: "./data/in/TIMIT/"
+    datasubset_to_use: "TIMIT_DUMMY-01"
+embeddings:
+    network: "pairwise_lstm_100_best.h5"
+hypothesis:
+    scaledown: true
+...

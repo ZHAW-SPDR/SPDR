@@ -1,0 +1,3 @@
+[submodule "ZHAW_deep_voice"]
+	path = ZHAW_deep_voice
+	url = https://github.com/Amin115/ZHAW_deep_voice

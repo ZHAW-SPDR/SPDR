@@ -1,0 +1,163 @@
+%YAML 1.1
+---
+data:
+    in: "./data/in/TIMIT/"
+    datasubset_to_use: "TIMIT_DUMMY-01"
+embeddings:
+    network: "pairwise_lstm_100_best.h5"
+hypothesis:
+    scaledown: true
+...
+---
+data:
+    in: "./data/in/TIMIT/"
+    datasubset_to_use: "TIMIT_DUMMY-01"
+embeddings:
+    network: "pairwise_lstm_1251_voxceleb_best.h5"
+hypothesis:
+    scaledown: true
+...
+---
+data:
+    in: "./data/in/TIMIT_RND/"
+    datasubset_to_use: "TIMIT_DUMMY"
+embeddings:
+    network: "pairwise_lstm_100_best.h5"
+hypothesis:
+    scaledown: true
+...
+---
+data:
+    in: "./data/in/TIMIT_RND/"
+    datasubset_to_use: "TIMIT_DUMMY"
+embeddings:
+    network: "pairwise_lstm_1251_voxceleb_best.h5"
+hypothesis:
+    scaledown: true
+...
+---
+data:
+    in: "./data/in/RT09/"
+    datasubset_to_use: "EDI_20071128-1000"
+embeddings:
+    network: "pairwise_lstm_100_best.h5"
+hypothesis:
+    scaledown: FALSE
+...
+---
+data:
+    in: "./data/in/RT09/"
+    datasubset_to_use: "EDI_20071128-1000"
+embeddings:
+    network: "pairwise_lstm_1251_voxceleb_best.h5"
+hypothesis:
+    scaledown: FALSE
+...
+---
+data:
+    in: "./data/in/RT09/"
+    datasubset_to_use: "EDI_20071128-1500"
+embeddings:
+    network: "pairwise_lstm_100_best.h5"
+hypothesis:
+    scaledown: FALSE
+...
+---
+data:
+    in: "./data/in/RT09/"
+    datasubset_to_use: "EDI_20071128-1500"
+embeddings:
+    network: "pairwise_lstm_1251_voxceleb_best.h5"
+hypothesis:
+    scaledown: FALSE
+...
+---
+data:
+    in: "./data/in/RT09/"
+    datasubset_to_use: "IDI_20090128-1600"
+embeddings:
+    network: "pairwise_lstm_100_best.h5"
+hypothesis:
+    scaledown: FALSE
+...
+---
+data:
+    in: "./data/in/RT09/"
+    datasubset_to_use: "IDI_20090128-1600"
+embeddings:
+    network: "pairwise_lstm_1251_voxceleb_best.h5"
+hypothesis:
+    scaledown: FALSE
+...
+---
+data:
+    in: "./data/in/RT09/"
+    datasubset_to_use: "IDI_20090129-1000"
+embeddings:
+    network: "pairwise_lstm_100_best.h5"
+hypothesis:
+    scaledown: FALSE
+...
+---
+data:
+    in: "./data/in/RT09/"
+    datasubset_to_use: "IDI_20090129-1000"
+embeddings:
+    network: "pairwise_lstm_1251_voxceleb_best.h5"
+hypothesis:
+    scaledown: FALSE
+...
+---
+data:
+    in: "./data/in/RT09/"
+    datasubset_to_use: "NIST_20080201-1405"
+embeddings:
+    network: "pairwise_lstm_100_best.h5"
+hypothesis:
+    scaledown: FALSE
+...
+---
+data:
+    in: "./data/in/RT09/"
+    datasubset_to_use: "NIST_20080201-1405"
+embeddings:
+    network: "pairwise_lstm_1251_voxceleb_best.h5"
+hypothesis:
+    scaledown: FALSE
+...
+---
+data:
+    in: "./data/in/RT09/"
+    datasubset_to_use: "NIST_20080227-1501"
+embeddings:
+    network: "pairwise_lstm_100_best.h5"
+hypothesis:
+    scaledown: FALSE
+...
+---
+data:
+    in: "./data/in/RT09/"
+    datasubset_to_use: "NIST_20080227-1501"
+embeddings:
+    network: "pairwise_lstm_1251_voxceleb_best.h5"
+hypothesis:
+    scaledown: FALSE
+...
+---
+data:
+    in: "./data/in/RT09/"
+    datasubset_to_use: "NIST_20080307-0955"
+embeddings:
+    network: "pairwise_lstm_100_best.h5"
+hypothesis:
+    scaledown: FALSE
+...
+---
+data:
+    in: "./data/in/RT09/"
+    datasubset_to_use: "NIST_20080307-0955"
+embeddings:
+    network: "pairwise_lstm_1251_voxceleb_best.h5"
+hypothesis:
+    scaledown: FALSE
+...

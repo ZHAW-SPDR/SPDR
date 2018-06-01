@@ -1,0 +1,234 @@
+==================== Plotting experiment 1 of 18 ====================
+---------- Name: DATASET_timit.SUBSET_timit_dummy-01.MODEL_pairwise_lstm_100_best ----------
+=============== Results ===============
+DER:			0.2853
+Purity:			0.9005
+Coverage:		1.0000
+PC-F-Score:		0.9476
+Confusion:		1.5000
+False Alarm:		0.4250
+Correct:		13.5750
+Missed Detection:	3.3240
+Total:			18.3990
+=======================================
+==================== Plotting experiment 2 of 18 ====================
+---------- Name: DATASET_timit.SUBSET_timit_dummy-01.MODEL_pairwise_lstm_1251_voxceleb_best ----------
+=============== Results ===============
+DER:			0.3482
+Purity:			0.8982
+Coverage:		0.8321
+PC-F-Score:		0.8639
+Confusion:		2.4730
+False Alarm:		0.2670
+Correct:		12.2600
+Missed Detection:	3.6660
+Total:			18.3990
+=======================================
+==================== Plotting experiment 3 of 18 ====================
+---------- Name: DATASET_timit_rnd.SUBSET_timit_dummy.MODEL_pairwise_lstm_100_best ----------
+=============== Results ===============
+DER:			0.8208
+Purity:			0.2381
+Coverage:		0.7474
+PC-F-Score:		0.3611
+Confusion:		36.1780
+False Alarm:		2.0180
+Correct:		11.3040
+Missed Detection:	4.3400
+Total:			51.8220
+=======================================
+==================== Plotting experiment 4 of 18 ====================
+---------- Name: DATASET_timit_rnd.SUBSET_timit_dummy.MODEL_pairwise_lstm_1251_voxceleb_best ----------
+=============== Results ===============
+DER:			0.5809
+Purity:			0.6651
+Coverage:		0.5376
+PC-F-Score:		0.5946
+Confusion:		22.3110
+False Alarm:		1.9840
+Correct:		23.7050
+Missed Detection:	5.8060
+Total:			51.8220
+=======================================
+==================== Plotting experiment 5 of 18 ====================
+---------- Name: DATASET_rt09.SUBSET_edi_20071128-1000.MODEL_pairwise_lstm_100_best ----------
+=============== Results ===============
+DER:			0.9294
+Purity:			0.6879
+Coverage:		0.1872
+PC-F-Score:		0.2943
+Confusion:		383.5480
+False Alarm:		8.1840
+Correct:		101.4700
+Missed Detection:	836.6510
+Total:			1321.6690
+=======================================
+==================== Plotting experiment 6 of 18 ====================
+---------- Name: DATASET_rt09.SUBSET_edi_20071128-1000.MODEL_pairwise_lstm_1251_voxceleb_best ----------
+=============== Results ===============
+DER:			0.9213
+Purity:			0.4945
+Coverage:		0.2247
+PC-F-Score:		0.3090
+Confusion:		420.6750
+False Alarm:		7.6100
+Correct:		111.5680
+Missed Detection:	789.4260
+Total:			1321.6690
+=======================================
+==================== Plotting experiment 7 of 18 ====================
+---------- Name: DATASET_rt09.SUBSET_edi_20071128-1500.MODEL_pairwise_lstm_100_best ----------
+=============== Results ===============
+DER:			0.9525
+Purity:			0.4945
+Coverage:		0.2060
+PC-F-Score:		0.2909
+Confusion:		323.3350
+False Alarm:		4.7800
+Correct:		59.7880
+Missed Detection:	774.7820
+Total:			1157.9050
+=======================================
+==================== Plotting experiment 8 of 18 ====================
+---------- Name: DATASET_rt09.SUBSET_edi_20071128-1500.MODEL_pairwise_lstm_1251_voxceleb_best ----------
+=============== Results ===============
+DER:			0.9619
+Purity:			0.5173
+Coverage:		0.1188
+PC-F-Score:		0.1932
+Confusion:		356.2290
+False Alarm:		3.7900
+Correct:		47.9600
+Missed Detection:	753.7160
+Total:			1157.9050
+=======================================
+==================== Plotting experiment 9 of 18 ====================
+---------- Name: DATASET_rt09.SUBSET_idi_20090128-1600.MODEL_pairwise_lstm_100_best ----------
+=============== Results ===============
+DER:			0.9293
+Purity:			0.4499
+Coverage:		0.1076
+PC-F-Score:		0.1737
+Confusion:		1091.9930
+False Alarm:		27.9030
+Correct:		127.7230
+Missed Detection:	191.2770
+Total:			1410.9930
+=======================================
+==================== Plotting experiment 10 of 18 ====================
+---------- Name: DATASET_rt09.SUBSET_idi_20090128-1600.MODEL_pairwise_lstm_1251_voxceleb_best ----------
+=============== Results ===============
+DER:			0.8793
+Purity:			0.6135
+Coverage:		0.1275
+PC-F-Score:		0.2112
+Confusion:		1022.6880
+False Alarm:		27.7420
+Correct:		198.0310
+Missed Detection:	190.2740
+Total:			1410.9930
+=======================================
+==================== Plotting experiment 11 of 18 ====================
+---------- Name: DATASET_rt09.SUBSET_idi_20090129-1000.MODEL_pairwise_lstm_100_best ----------
+=============== Results ===============
+DER:			0.9272
+Purity:			0.4604
+Coverage:		0.1140
+PC-F-Score:		0.1827
+Confusion:		881.5750
+False Alarm:		29.1320
+Correct:		120.0510
+Missed Detection:	247.7590
+Total:			1249.3850
+=======================================
+==================== Plotting experiment 12 of 18 ====================
+---------- Name: DATASET_rt09.SUBSET_idi_20090129-1000.MODEL_pairwise_lstm_1251_voxceleb_best ----------
+=============== Results ===============
+DER:			0.9492
+Purity:			0.5088
+Coverage:		0.0786
+PC-F-Score:		0.1362
+Confusion:		861.2480
+False Alarm:		25.8260
+Correct:		89.3440
+Missed Detection:	298.7930
+Total:			1249.3850
+=======================================
+==================== Plotting experiment 13 of 18 ====================
+---------- Name: DATASET_rt09.SUBSET_nist_20080201-1405.MODEL_pairwise_lstm_100_best ----------
+=============== Results ===============
+DER:			0.9395
+Purity:			0.3026
+Coverage:		0.1253
+PC-F-Score:		0.1772
+Confusion:		348.5920
+False Alarm:		14.0130
+Correct:		51.6400
+Missed Detection:	221.4880
+Total:			621.7200
+=======================================
+==================== Plotting experiment 14 of 18 ====================
+---------- Name: DATASET_rt09.SUBSET_nist_20080201-1405.MODEL_pairwise_lstm_1251_voxceleb_best ----------
+=============== Results ===============
+DER:			0.8276
+Purity:			0.3484
+Coverage:		0.1960
+PC-F-Score:		0.2508
+Confusion:		273.8920
+False Alarm:		13.9130
+Correct:		121.0670
+Missed Detection:	226.7610
+Total:			621.7200
+=======================================
+==================== Plotting experiment 15 of 18 ====================
+---------- Name: DATASET_rt09.SUBSET_nist_20080227-1501.MODEL_pairwise_lstm_100_best ----------
+=============== Results ===============
+DER:			0.8801
+Purity:			0.3305
+Coverage:		0.1350
+PC-F-Score:		0.1917
+Confusion:		524.4670
+False Alarm:		8.8820
+Correct:		99.4230
+Missed Detection:	131.0240
+Total:			754.9140
+=======================================
+==================== Plotting experiment 16 of 18 ====================
+---------- Name: DATASET_rt09.SUBSET_nist_20080227-1501.MODEL_pairwise_lstm_1251_voxceleb_best ----------
+=============== Results ===============
+DER:			0.7583
+Purity:			0.4019
+Coverage:		0.2121
+PC-F-Score:		0.2777
+Confusion:		432.5750
+False Alarm:		8.8820
+Correct:		191.3150
+Missed Detection:	131.0240
+Total:			754.9140
+=======================================
+==================== Plotting experiment 17 of 18 ====================
+---------- Name: DATASET_rt09.SUBSET_nist_20080307-0955.MODEL_pairwise_lstm_100_best ----------
+=============== Results ===============
+DER:			0.8719
+Purity:			0.3607
+Coverage:		0.1473
+PC-F-Score:		0.2092
+Confusion:		712.0900
+False Alarm:		21.4190
+Correct:		144.8690
+Missed Detection:	106.9950
+Total:			963.9540
+=======================================
+==================== Plotting experiment 18 of 18 ====================
+---------- Name: DATASET_rt09.SUBSET_nist_20080307-0955.MODEL_pairwise_lstm_1251_voxceleb_best ----------
+=============== Results ===============
+DER:			0.6755
+Purity:			0.6046
+Coverage:		0.3111
+PC-F-Score:		0.4108
+Confusion:		522.7150
+False Alarm:		21.4190
+Correct:		334.2440
+Missed Detection:	106.9950
+Total:			963.9540
+=======================================
