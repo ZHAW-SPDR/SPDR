@@ -1,7 +1,5 @@
 """
     An API for Voice Activity Detection
-
-    retrieved from https://github.com/wiseman/py-webrtcvad
 """
 import os
 import pickle
@@ -37,11 +35,17 @@ class Vad(ABC):
                 cluster_result[i] = -1
 
         for (cluster, speech_map) in per_cluster_speech_map.items():
-            if speech_map.count(False)/len(speech_map) > threshold:
+            if speech_map.count(False) / len(speech_map) > threshold:
                 cluster_result[np.where(cluster_result == cluster)] = -1
 
 
 class SPDR_GMM_Vad(Vad):
+    """
+        Voice activity detection using a trained GMM.
+        The GMM is trained with two components. As training data the VoxCeleb dataset was used.
+        As features MFCC are used, where the MFCC are extracted by librosa.
+        vad_gmm.py provides methods to train a new model.
+    """
     def __init__(self):
         self.config = SPDR_Util.load_config()
         self.segment_size = self.config["segment"]["size"]
