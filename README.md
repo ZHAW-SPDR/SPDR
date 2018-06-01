@@ -73,3 +73,19 @@ Add the SPDR conda environment (created via setup_conda.sh) according this docum
 https://docs.anaconda.com/anaconda/user-guide/tasks/integration/pycharm.
 
 Mark the folder "ZHAW_deep_voice" as "Source Root".
+
+## Various
+
+### Audio normalization
+Audio can be normalized using following script:
+~~~~
+$ ./normalize_audio.sh
+~~~~
+"ffmpeg-normalize" is used to normalize the audio.
+
+### Voice Activity Detection (VAD)
+A GMM (Gaussian Mixture Model) is used as VAD. The current model ./data/vad_models/vad_voxceleb.pkl
+is trained on the VoxCeleb dataset. The GMM has two components to distinguish speech and non-speech segments.
+As feature vectors 20 MFCC are used and the first and second derivative.
+
+The script vad_gmm.py provides methods to train new GMM.
